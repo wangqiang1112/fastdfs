@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8" />
+    <title>fileUpload page</title>
+</head>
+<body>
+文件上传成功 ！！！
+<br/>
+图片路径：<span th:text="${allPath}"></span>
+<br/>
+文件名：<span th:text="${filename}"></span>
+<br/>
+<a href="goIndex">返回</a>
+<a th:href="@{/downloadFile(filename=${filename},allPath=${allPath})}">下载</a>
+</body>
+</html>
